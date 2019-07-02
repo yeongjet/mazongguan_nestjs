@@ -1,0 +1,8 @@
+.vscode
+.eslintrc
+.gitignore
+.prettierrc
+dist
+#因为开发环境不同，不同的环境所安装的node包也是有区别的，所以不能直接
+#拷贝node_modules目录，应该在Dockerfile用npm安装
+node_modules

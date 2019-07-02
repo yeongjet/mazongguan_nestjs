@@ -1,0 +1,19 @@
+{
+    "parser": "babel-eslint",
+    "plugins": ["babel"],
+    "globals": {},
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "modules": true
+        }
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "semi": ["error", "never"],
+        "quotes": ["error", "single"],
+        "babel/camelcase": 1,
+        "babel/no-unused-expressions": 1
+    },
+    "extends": ["plugin:prettier/recommended"]
+}

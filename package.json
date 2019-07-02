@@ -1,0 +1,26 @@
+{
+  "name": "mazongguan_nestjs",
+  "version": "0.0.1",
+  "description": "mazongguan backend project rewrite using nestjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx babel --extensions .ts --ignore node_modules dist . -d ./dist",
+    "test": "jest"
+  },
+  "author": "yeongjet",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
+}
