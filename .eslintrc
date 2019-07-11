@@ -6,7 +6,7 @@
         "sourceType": "module",
         "ecmaFeatures": {
             "modules": true
-          }
+        }
     },
     "rules": {
         "indent": ["error", 4],
