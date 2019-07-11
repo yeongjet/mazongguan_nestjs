@@ -1,19 +1,17 @@
 {
-    "parser": "babel-eslint",
-    "plugins": ["babel"],
-    "globals": {},
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
     "parserOptions": {
         "ecmaVersion": 6,
+        "sourceType": "module",
         "ecmaFeatures": {
             "modules": true
-        }
+          }
     },
     "rules": {
         "indent": ["error", 4],
         "semi": ["error", "never"],
-        "quotes": ["error", "single"],
-        "babel/camelcase": 1,
-        "babel/no-unused-expressions": 1
+        "quotes": ["error", "single"]
     },
-    "extends": ["plugin:prettier/recommended"]
+    "extends": ["plugin:prettier/recommended", "plugin:@typescript-eslint/recommended"]
 }
