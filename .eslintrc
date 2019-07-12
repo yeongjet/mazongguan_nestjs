@@ -11,7 +11,12 @@
     "rules": {
         "indent": ["error", 4],
         "semi": ["error", "never"],
-        "quotes": ["error", "single"]
+        "quotes": ["error", "single"],
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/no-parameter-properties": "off",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/explicit-function-return-type": "off"
     },
     "extends": ["plugin:prettier/recommended", "plugin:@typescript-eslint/recommended"]
 }

@@ -4,14 +4,15 @@
   "description": "mazongguan backend project rewrite using nestjs",
   "scripts": {
     "format": "npx prettier **/**/*.ts --ignore-path ./.prettierignore --write && git status",
-    "build": "npx babel --extensions .ts --ignore node_modules dist . -d ./dist",
+    "start:api": "lerna exec npm run start --scope @mazongguan/bp",
     "test": "jest"
   },
   "author": "yeongjet",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
@@ -46,6 +47,8 @@
     "@nestjs/common": "^6.4.1",
     "@nestjs/core": "^6.4.1",
     "@nestjs/platform-fastify": "^6.4.1",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.9.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2"
   }

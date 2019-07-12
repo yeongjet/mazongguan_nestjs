@@ -1,7 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common'
 import { BP } from './bp.interface'
 import { BPService } from './bp.service'
-import { BPIdPipe } from './bp.id.pipe'
+import { UserIDPipe } from './UserIDPipe'
 
 @Controller('bp')
 export class BPController {
@@ -14,7 +14,7 @@ export class BPController {
     }
 
     @Get(':id')
-    async findOne(@Param('id', new BPIdPipe()) id): Promise<BP> {
+    async findOne(@Param('id', new UserIDPipe()) id): Promise<BP> {
         console.log(`get member: ${id}`)
         return await this.bpService.findOne(id)
     }

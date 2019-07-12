@@ -6,4 +6,4 @@ import { BPService } from './bp.service'
     controllers: [BPController],
     providers: [BPService]
 })
-export class MemberModule {}
+export class BPModule {}
