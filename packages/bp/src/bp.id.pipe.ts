@@ -9,7 +9,7 @@ import { APIException } from '../../common/exception/api.exception'
 
 @Injectable()
 export class UserIDPipe implements PipeTransform {
-    transform(value: number, metadata: ArgumentMetadata) {
+    transform(value: any, metadata: ArgumentMetadata) {
         console.log(value)
         let id = parseInt(value)
         console.log(id)
