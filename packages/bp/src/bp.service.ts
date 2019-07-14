@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { BP } from './bp.interface'
 import { BPServiceInterface } from './bp.service.interface'
+import * as BPDTO from './bp.dto'
 
 @Injectable()
 export class BPService implements BPServiceInterface {
@@ -40,7 +41,9 @@ export class BPService implements BPServiceInterface {
         }
     }
 
-    async signUp() {}
+    async signUp(dto: BPDTO.SignUpDto): Promise<number> {
+        return 1
+    }
 
     async updateProfile() {}
 }

@@ -17,8 +17,8 @@ export class HttpExceptionFilter<T> implements ExceptionFilter {
         //exception.getStatus
         if (exception instanceof APIException) {
             response.status(status).json({
-                errorCode: exception.getErrorCode(),
-                errorMessage: exception.getErrorMessage(),
+                code: exception.getErrorCode(),
+                message: exception.getErrorMessage(),
                 date: new Date().toLocaleDateString(),
                 path: request.url
             })

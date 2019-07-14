@@ -3,7 +3,7 @@ import { Type } from 'class-transformer'
 import { IsString, IsInt, IsNotEmpty, Min, Max, Length } from 'class-validator'
 import { APICode } from '../../common/enum/api.code.enum'
 
-export class BPSignUpDto {
+export class SignUpDto {
     @Type(() => String)
     @Length(1, 8, {
         message: '用户名长度为1-8位',
