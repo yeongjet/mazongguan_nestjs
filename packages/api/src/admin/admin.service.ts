@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common'
-import { BP } from './bp.interface'
-import { BPServiceInterface } from './bp.service.interface'
-import * as BPDTO from './bp.dto'
+import { Admin } from './admin.interface'
+import { AdminServiceInterface } from './admin.service.interface'
+import * as dto from './admin.dto'
 
 @Injectable()
-export class BPService implements BPServiceInterface {
-    async findAll(): Promise<BP[]> {
+export class AdminService implements AdminServiceInterface {
+    async findAll(): Promise<Admin[]> {
         return [
             {
                 user_id: 3,
@@ -24,7 +24,7 @@ export class BPService implements BPServiceInterface {
         ]
     }
 
-    async findOne(id: number): Promise<BP> {
+    async findOne(id: number): Promise<Admin> {
         return {
             user_id: 3,
             username: 'joke',
@@ -41,7 +41,7 @@ export class BPService implements BPServiceInterface {
         }
     }
 
-    async signUp(dto: BPDTO.SignUpDto): Promise<number> {
+    async signUp(dto: dto.Signup): Promise<number> {
         return 1
     }
 

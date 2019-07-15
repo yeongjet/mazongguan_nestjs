@@ -8,28 +8,29 @@ import {
     UsePipes,
     ValidationPipe
 } from '@nestjs/common'
-import { BP } from './bp.interface'
-import { BPService } from './bp.service'
-import { UserIDPipe } from './UserIDPipe'
-import * as BPDto from './bp.dto'
+import { Admin } from './admin.interface'
+import { AdminService } from './admin.service'
+import { IdPipe } from './admin.pipe'
+import * as dto from './admin.dto'
 
 @Controller('bp')
-export class BPController {
-    constructor(private readonly bpService: BPService) {}
+export class AdminController {
+    constructor(private readonly bpService: AdminService) {}
 
     @Post()
     @UsePipes(new ValidationPipe({ transform: true }))
-    async create(@Body() BPSignUpDto: BPDto.SignUpDto) {
-        this.bpService.signUp(BPSignUpDto)
+    async create(@Body() signupDto: dto.Signup) {
+        this.bpService.signUp(signupDto)
     }
+
     @Get()
-    async findAll(): Promise<BP[]> {
+    async findAll(): Promise<Admin[]> {
         console.log('get all member')
         return await this.bpService.findAll()
     }
 
     @Get(':id')
-    async findOne(@Param('id', new ParseIntPipe()) id): Promise<BP> {
+    async findOne(@Param('id', new ParseIntPipe()) id): Promise<Admin> {
         console.log(`get member: ${id}`)
         return await this.bpService.findOne(id)
     }

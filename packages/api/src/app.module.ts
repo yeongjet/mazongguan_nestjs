@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common'
-import { BPModule } from './bp.module'
+import { AdminModule } from './admin/admin.module'
 
 @Module({
-    imports: [BPModule]
+    imports: [AdminModule]
 })
 export class AppModule {}

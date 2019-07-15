@@ -4,12 +4,12 @@ import {
     PipeTransform,
     HttpStatus
 } from '@nestjs/common'
-import { APICode } from '../../common/enum/api.code.enum'
-import { APIException } from '../../common/exception/api.exception'
+import { APICode } from '../../../common/enum/api.code.enum'
+import { APIException } from '../../../common/exception/api.exception'
 
 @Injectable()
-export class UserIDPipe implements PipeTransform {
-    transform(value: string, metadata: ArgumentMetadata) {
+export class IdPipe implements PipeTransform {
+    transform(value: any, metadata: ArgumentMetadata) {
         console.log(value)
         let id = parseInt(value)
         console.log(id)

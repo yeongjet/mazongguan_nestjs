@@ -1,10 +1,10 @@
-export interface BP {
-    readonly user_id?: number
+export interface Admin {
+    readonly user_id: number
     readonly username: string
     readonly password: string
-    readonly email?: string
-    readonly cellphone?: string
-    readonly avatar_url?: string
+    readonly email: string
+    readonly cellphone: string
+    readonly avatar_url: string
     readonly role: number[]
     readonly created_at: string
     readonly updated_at: string

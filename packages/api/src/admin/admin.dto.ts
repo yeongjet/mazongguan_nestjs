@@ -1,9 +1,9 @@
-import { BP } from './bp.interface'
+import { Admin } from './admin.interface'
 import { Type } from 'class-transformer'
 import { IsString, IsInt, IsNotEmpty, Min, Max, Length } from 'class-validator'
-import { APICode } from '../../common/enum/api.code.enum'
+import { APICode } from '../../../common/enum/api.code.enum'
 
-export class SignUpDto {
+export class Signup {
     @Type(() => String)
     @Length(1, 8, {
         message: '用户名长度为1-8位',
