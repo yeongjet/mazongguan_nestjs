@@ -4,13 +4,12 @@ import {
     Post,
     Body,
     Param,
-    ParseIntPipe,
     UsePipes,
     ValidationPipe
 } from '@nestjs/common'
 import { Admin } from './admin.interface'
 import { AdminService } from './admin.service'
-import { IdPipe } from './admin.pipe'
+import { ParseIdPipe } from './admin.pipe'
 import * as dto from './admin.dto'
 
 @Controller('bp')
@@ -30,7 +29,7 @@ export class AdminController {
     }
 
     @Get(':id')
-    async findOne(@Param('id', new ParseIntPipe()) id): Promise<Admin> {
+    async findOne(@Param('id', new ParseIdPipe()) id): Promise<Admin> {
         console.log(`get member: ${id}`)
         return await this.bpService.findOne(id)
     }

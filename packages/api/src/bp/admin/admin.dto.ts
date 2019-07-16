@@ -1,7 +1,7 @@
 import { Admin } from './admin.interface'
 import { Type } from 'class-transformer'
 import { IsString, IsInt, IsNotEmpty, Min, Max, Length } from 'class-validator'
-import { APICode } from '../../../common/enum/api.code.enum'
+import { APICode } from '../../common/enum/api.code.enum'
 
 export class Signup {
     @Type(() => String)
