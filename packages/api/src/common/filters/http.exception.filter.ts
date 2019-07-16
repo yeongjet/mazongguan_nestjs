@@ -14,19 +14,23 @@ export class HttpExceptionFilter implements ExceptionFilter {
         const response = ctx.getResponse()
         const request = ctx.getRequest()
         const status = exception.getStatus()
-        console.log(response.status(''))
+        // console.log(`request.ip: ${request.ip}`)
+        // console.log(`request.headers: ${JSON.stringify(request.headers)}`)
+        // console.log(`request.query: ${JSON.stringify(request.query)}`)
+        // console.log(`request.body: ${request.body}`)
+        // console.log(`request.params: ${JSON.stringify(request.params)}`)
+        // console.log(`request.id: ${request.id}`)
+        // console.log(`request.hostname: ${request.hostname}`)
         if (exception instanceof APIException) {
-            response.status(status)({
+            response.status(status).send({
                 code: exception.getErrorCode(),
                 message: exception.getErrorMessage(),
-                date: new Date().toLocaleDateString(),
-                path: request.url
+                date: new Date().toLocaleDateString()
             })
         } else {
-            response.status(status)({
+            response.status(status).send({
                 statusCode: status,
-                date: new Date().toLocaleDateString(),
-                path: request.url
+                date: new Date().toLocaleDateString()
             })
         }
     }
