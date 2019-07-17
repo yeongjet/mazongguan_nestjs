@@ -1,12 +1,12 @@
 import { Admin } from './admin.interface'
-import * as dto from './admin.dto'
+import * as DTO from './admin.dto'
 
 export interface AdminServiceInterface {
     findAll(): Promise<Admin[]>
 
     findOne(id: number): Promise<Admin>
 
-    signUp(dto: dto.Signup)
+    signUp(dto: DTO.SignUp)
 
     updateProfile()
 }

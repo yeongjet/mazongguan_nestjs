@@ -25,12 +25,13 @@ export class HttpExceptionFilter implements ExceptionFilter {
             response.status(status).send({
                 code: exception.getErrorCode(),
                 message: exception.getErrorMessage(),
-                date: new Date().toLocaleDateString()
+                date: new Date().toLocaleString()
             })
         } else {
             response.status(status).send({
-                statusCode: status,
-                date: new Date().toLocaleDateString()
+                code: status,
+                message: exception.message.message,
+                date: new Date().toLocaleString()
             })
         }
     }
