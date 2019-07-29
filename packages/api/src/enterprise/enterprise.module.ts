@@ -6,4 +6,4 @@ import { AccountService } from './account/account.service'
     controllers: [AccountController],
     providers: [AccountService]
 })
-export class BPModule {}
+export class EnterpriseModule {}

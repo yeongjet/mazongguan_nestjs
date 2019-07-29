@@ -4,7 +4,7 @@
   "description": "mazongguan backend project rewrite using nestjs",
   "scripts": {
     "format": "npx prettier **/**/*.ts --ignore-path ./.prettierignore --write && git status",
-    "start:api": "lerna exec npm run start --scope @mazongguan/bp",
+    "start:ts-node": "lerna exec npm run start --scope @mazongguan/bp",
     "test": "jest"
   },
   "author": "yeongjet",
@@ -50,8 +50,10 @@
     "@nestjs/common": "^6.4.1",
     "@nestjs/core": "^6.4.1",
     "@nestjs/platform-fastify": "^6.4.1",
+    "@nestjs/swagger": "^3.1.0",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.9.1",
+    "fastify-swagger": "^2.4.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2",
     "ts-node": "^8.3.0"
