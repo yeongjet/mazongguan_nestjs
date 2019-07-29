@@ -1,4 +1,4 @@
-import { Admin } from './admin.interface'
+import { Account } from './account.interface'
 import { Type } from 'class-transformer'
 import { IsString, IsInt, IsNotEmpty, Min, Max, Length } from 'class-validator'
 import { APICode } from '../../common/enum/api.code.enum'
