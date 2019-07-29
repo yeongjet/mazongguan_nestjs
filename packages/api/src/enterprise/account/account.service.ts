@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
-import { Admin } from './admin.interface'
-import { AdminServiceInterface } from './admin.service.interface'
-import * as DTO from './admin.dto'
+import { Account } from './account.interface'
+import { AccountServiceInterface } from './account.service.interface'
+import * as DTO from './account.dto'
 import * as _ from 'lodash'
 
 const dataSet = [
@@ -36,8 +36,8 @@ const dataSet = [
 ]
 
 @Injectable()
-export class AdminService implements AdminServiceInterface {
-    async findAll(): Promise<Admin[]> {
+export class AccountService implements AccountServiceInterface {
+    async findAll(): Promise<Account[]> {
         return dataSet
     }
 

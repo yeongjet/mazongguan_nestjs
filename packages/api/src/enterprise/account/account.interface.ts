@@ -1,4 +1,4 @@
-export interface Admin {
+export interface Account {
     readonly user_id: number
     readonly username: string
     readonly password: string
