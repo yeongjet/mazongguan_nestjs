@@ -4,5 +4,6 @@
         "typescript"
     ],
     "eslint.alwaysShowStatus": true,
-    "debug.node.autoAttach": "on"
+    "debug.node.autoAttach": "on",
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
 }

@@ -5,11 +5,7 @@ export class APIException extends HttpException {
     private errorMessage: string
     private errorCode: APICode
 
-    constructor(
-        errorMessage: string,
-        errorCode: APICode,
-        statusCode: HttpStatus
-    ) {
+    constructor(errorMessage: string, errorCode: APICode, statusCode: HttpStatus) {
         super(errorMessage, statusCode)
         this.errorMessage = errorMessage
         this.errorCode = errorCode

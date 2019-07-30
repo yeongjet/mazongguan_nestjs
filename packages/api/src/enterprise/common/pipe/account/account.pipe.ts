@@ -4,8 +4,8 @@ import {
     PipeTransform,
     HttpStatus
 } from '@nestjs/common'
-import { APICode } from '../../common/enum/api.code.enum'
-import { APIException } from '../../common/exception/api.exception'
+import { APICode } from '../../../../common/enum/api.code.enum'
+import { APIException } from '../../../../common/exception/api.exception'
 
 @Injectable()
 export class ParseIdPipe implements PipeTransform {

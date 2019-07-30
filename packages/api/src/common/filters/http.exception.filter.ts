@@ -1,18 +1,13 @@
 import { APIException } from '../exception/api.exception'
 
-import {
-    ExceptionFilter,
-    Catch,
-    ArgumentsHost,
-    HttpException
-} from '@nestjs/common'
+import { ExceptionFilter, Catch, ArgumentsHost, HttpException } from '@nestjs/common'
 
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
     catch(exception: HttpException, host: ArgumentsHost) {
         const ctx = host.switchToHttp()
         const response = ctx.getResponse()
-        const request = ctx.getRequest()
+        //const request = ctx.getRequest()
         const status = exception.getStatus()
         // console.log(`request.ip: ${request.ip}`)
         // console.log(`request.headers: ${JSON.stringify(request.headers)}`)
