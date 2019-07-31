@@ -24,7 +24,6 @@ export class HttpExceptionFilter implements ExceptionFilter {
             })
         } else {
             response.status(status).send({
-                code: status,
                 message: exception.message.message,
                 date: new Date().toLocaleString()
             })

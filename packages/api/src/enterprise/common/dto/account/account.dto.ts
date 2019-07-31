@@ -4,7 +4,14 @@ import { ApiModelProperty } from '@nestjs/swagger'
 import { APICode } from '../../../../common/enum/api.code.enum'
 
 export class SignUpDto {
-    @ApiModelProperty({ description: '用户名', required: true, type: 'string', minLength: 3, maxLength: 8, example: 'Micheal Jackson' })
+    @ApiModelProperty({
+        description: '用户名',
+        required: true,
+        type: 'string',
+        minLength: 3,
+        maxLength: 8,
+        example: 'Micheal Jackson'
+    })
     @Type(() => String)
     @Length(3, 8, {
         message: '用户名长度为3-8位',
@@ -20,7 +27,14 @@ export class SignUpDto {
     })
     readonly username: string
 
-    @ApiModelProperty({ description: '密码', required: true, type: 'string', minLength: 6, maxLength: 32, example: 'love123' })
+    @ApiModelProperty({
+        description: '密码',
+        required: true,
+        type: 'string',
+        minLength: 6,
+        maxLength: 32,
+        example: 'love123'
+    })
     @Type(() => String)
     @Length(6, 32, {
         message: '密码长度为6-32位',

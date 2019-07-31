@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common'
+import { Injectable, Logger } from '@nestjs/common'
 import { Account } from '../common/interface/account/account.interface'
 import { AccountServiceInterface } from '../common/interface/account/account.service.interface'
 import { SignUpDto } from '../common/dto/account/account.dto'
@@ -41,13 +41,11 @@ export class AccountService implements AccountServiceInterface {
 
     async findOne(id: number) {
         let result = _.find(dataSet, o => o.user_id === id)
-        console.log(`result: ${result}`)
+        Logger.verbose(`result: ${JSON.stringify(result)}`)
         return result
     }
 
     async signUp(dto: SignUpDto): Promise<number> {
-        console.log(dto)
-        console.log(typeof dto)
         return 1
     }
 
