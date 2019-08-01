@@ -6,7 +6,7 @@
     "format": "npx prettier **/**/*.ts --ignore-path ./.prettierignore --write && git status",
     "start:api:ts-node": "lerna exec npm run start:ts-node --scope @mazongguan/bp",
     "test": "jest",
-    "check-update": "npx ncu"
+    "check-update": "ncu"
   },
   "author": "yeongjet",
   "license": "ISC",
