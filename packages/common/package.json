@@ -1,10 +1,10 @@
 {
   "name": "@mazongguan/common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-      "build": "tsc"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",

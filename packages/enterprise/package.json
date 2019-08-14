@@ -1,6 +1,6 @@
 {
   "name": "@mazongguan/enterprise",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "babel --extensions .ts --ignore node_modules dist . -d ./dist",
     "build2": "rimraf dist && babel --extensions .ts --ignore node_modules dist . -d ./dist",
@@ -8,8 +8,5 @@
     "start:ts-node": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:babel-node": "babel-node --extensions .ts --config-file ./babel.config.js -- src/main.ts --debug",
     "test": "jest"
-  },
-  "dependencies": {
-
   }
 }
