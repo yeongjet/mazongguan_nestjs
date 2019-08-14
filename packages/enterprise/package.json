@@ -1,6 +1,6 @@
 {
   "name": "@mazongguan/enterprise",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build": "babel --extensions .ts --ignore node_modules dist . -d ./dist",
     "build2": "rimraf dist && babel --extensions .ts --ignore node_modules dist . -d ./dist",
