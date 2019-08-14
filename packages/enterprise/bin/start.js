@@ -1,14 +1,12 @@
 const { APIEnterprise } = require('../lib')
-
+const { APISetting } = require('@mazongguan/common')
 new APIEnterprise({
     host: 'localhost',
     port: 3000,
     logLevel: 'silly',
-    lxd: {
-        cert: fs.readFileSync(path.join(ROOT, certPath)),
-        key: fs.readFileSync(path.join(ROOT, keyPath))
+    doc: {
+        url: '/api/v1/doc'
     },
-    docUrl: '/api/v1/doc',
     database: {
         host: 'localhost',
         port: 5432,

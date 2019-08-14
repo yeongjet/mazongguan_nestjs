@@ -16,7 +16,7 @@ ConfigModule = __decorate([
             {
                 provide: config_service_1.ConfigService,
                 // useValue: new ConfigService(`${process.env.NODE_ENV}db.env`)
-                useValue: new config_service_1.ConfigService('../../../../../dev/db.env')
+                useValue: new config_service_1.ConfigService()
             }
         ],
         exports: [config_service_1.ConfigService]
