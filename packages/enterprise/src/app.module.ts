@@ -6,9 +6,6 @@ import { AccountService } from './account/account.service'
 @Module({
     controllers: [AccountController],
     providers: [AccountService],
-    imports: [
-        ConfigModule
-    ]
+    imports: [ConfigModule]
 })
-
 export class AppModule {}
