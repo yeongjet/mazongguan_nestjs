@@ -2,9 +2,10 @@
   "name": "@mazongguan/common",
   "version": "0.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc"
   },
-  "author": ""
+  "author": "",
+  "gitHead": "da2cd26f58120a5836744dff55c415d30da1d8b4"
 }
