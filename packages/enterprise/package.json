@@ -1,6 +1,6 @@
 {
     "name": "@mazongguan/enterprise",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "main": "lib/index.js",
     "description": "Mazongguan Enterprise API.",
     "scripts": {
@@ -9,6 +9,6 @@
         "test": "jest"
     },
     "dependencies": {
-        "@mazongguan/common": "^0.0.3"
+        "@mazongguan/common": "^0.0.4"
     }
 }
