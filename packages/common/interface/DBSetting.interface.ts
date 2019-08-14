@@ -4,4 +4,5 @@ export interface DBSetting {
     password: string
     database: string
     port: number
+    logging: boolean
 }

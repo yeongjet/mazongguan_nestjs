@@ -6,7 +6,5 @@
   "scripts": {
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": ""
 }

@@ -1,16 +1,16 @@
 import { IsInt, IsString } from 'class-validator'
 import { Type } from 'class-transformer'
-import { DBSetting } from '../interface'
-import { LogLevel } from '../enum/LogLevel.enum'
+import { DBSetting, DocSetting } from '../interface'
+import { LogLevel } from '../enum'
 
-export class APISettings {
+export class APISetting {
     @IsInt()
     @Type(() => Number)
-    port? = 3000
+    port
     @IsString()
     @Type(() => String)
-    host? = 'localhost'
+    host
+    logLevel
     database: DBSetting
-    logLevel?: LogLevel = LogLevel.LOG
-    docUrl: string
+    doc: DocSetting
 }

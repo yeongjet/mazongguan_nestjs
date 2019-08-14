@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es6",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./"
-  },
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "rootDir": "./src",
+        "outDir": "./lib",
+        "lib": ["es2017"]
+    },
+    "exclude": ["**/node_modules", "**/lib"]
 }

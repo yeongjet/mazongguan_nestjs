@@ -1,12 +1,14 @@
 {
-  "name": "@mazongguan/enterprise",
-  "version": "0.0.3",
-  "scripts": {
-    "build": "babel --extensions .ts --ignore node_modules dist . -d ./dist",
-    "build2": "rimraf dist && babel --extensions .ts --ignore node_modules dist . -d ./dist",
-    "start:dist": "babel-node dist/src/main.js",
-    "start:ts-node": "ts-node -r tsconfig-paths/register src/main.ts",
-    "start:babel-node": "babel-node --extensions .ts --config-file ./babel.config.js -- src/main.ts --debug",
-    "test": "jest"
-  }
+    "name": "@mazongguan/enterprise",
+    "version": "0.0.3",
+    "main": "lib/index.js",
+    "description": "Mazongguan Enterprise API.",
+    "scripts": {
+        "build": "tsc",
+        "start": "node bin/start.js",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@mazongguan/common": "^0.0.3"
+    }
 }
