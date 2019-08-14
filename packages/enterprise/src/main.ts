@@ -6,7 +6,7 @@ import { HttpExceptionFilter } from './common/filters/http.exception.filter'
 import { APISettings } from '@mazongguan/common'
 
 export class APIEnterprise {
-    constructor(private setting: APISettings, private server)
+    constructor(private setting: APISettings, private server) {}
 }
 ;(async () => {
     console.log('start up..')
