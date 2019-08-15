@@ -8,9 +8,12 @@ import { APISetting } from '@mazongguan/common'
 import chalk from 'chalk'
 
 export class APIEnterprise {
+    private url: string
     private app: NestFastifyApplication
 
-    constructor(private setting: APISetting) {}
+    constructor(private setting: APISetting) {
+        this.url = `${this.setting.protocol}://${this.setting.host}:${this.setting.port}`
+    }
 
     private async setupApp() {
         this.app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter())
@@ -37,7 +40,7 @@ export class APIEnterprise {
             Logger.error('An error occured while starting up server')
             Logger.error(err.stack)
         }
-        Logger.log(`API address: ${chalk.blue(`${this.setting.host}:${this.setting.port}`)}`)
-        Logger.log(`Document address: http://${chalk.blue(`${this.setting.host}:${this.setting.port}${this.setting.doc.url}`)}`)
+        Logger.log(`API address: ${chalk.blue(this.url)}`)
+        Logger.log(`Document address: ${chalk.blue(`${this.url}${this.setting.doc.url}`)}`)
     }
 }

@@ -1,4 +1,4 @@
-import { APISetting, LogLevel, DBSetting, DocSetting } from '@mazongguan/common'
+import { APISetting, LogLevel } from '@mazongguan/common'
 import { APIEnterprise } from '../src'
 const option: APISetting = {
     protocol: 'http',

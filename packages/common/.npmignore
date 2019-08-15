@@ -1,4 +1,2 @@
-bin
 src
-package-lock.json
 tsconfig.json
