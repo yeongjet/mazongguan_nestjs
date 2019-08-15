@@ -1,6 +1,7 @@
 import { APISetting, LogLevel, DBSetting, DocSetting } from '@mazongguan/common'
 import { APIEnterprise } from '../src'
 const option: APISetting = {
+    protocol: 'http',
     port: 3000,
     host: 'localhost',
     logLevel: LogLevel.LOG,

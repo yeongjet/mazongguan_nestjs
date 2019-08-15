@@ -5,6 +5,9 @@ import { DBSetting, DocSetting } from '../interface'
 import { LogLevel } from '../enum'
 
 export class APISetting {
+    @IsString()
+    @Type(() => String)
+    protocol
     @IsInt()
     @Type(() => Number)
     port
