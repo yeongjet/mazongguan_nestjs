@@ -11,22 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const class_validator_1 = require("class-validator");
 const class_transformer_1 = require("class-transformer");
-const LogLevel_enum_1 = require("../enum/LogLevel.enum");
-class APISettings {
-    constructor() {
-        this.port = 3000;
-        this.host = 'localhost';
-        this.logLevel = LogLevel_enum_1.LogLevel.LOG;
-    }
+class APISetting {
 }
 __decorate([
     class_validator_1.IsInt(),
     class_transformer_1.Type(() => Number),
     __metadata("design:type", Object)
-], APISettings.prototype, "port", void 0);
+], APISetting.prototype, "port", void 0);
 __decorate([
     class_validator_1.IsString(),
     class_transformer_1.Type(() => String),
     __metadata("design:type", Object)
-], APISettings.prototype, "host", void 0);
-exports.APISettings = APISettings;
+], APISetting.prototype, "host", void 0);
+exports.APISetting = APISetting;
