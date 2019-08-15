@@ -11,5 +11,5 @@
         "outDir": "./lib",
         "lib": ["es2017"]
     },
-    "exclude": ["**/node_modules", "**/lib"]
+    "exclude": ["**/node_modules", "**/lib", "**/bin"]
 }
