@@ -8,9 +8,6 @@ export class APISetting {
     @IsString()
     @Type(() => String)
     protocol
-    @IsString()
-    @Type(() => String)
-    protocols
     @IsInt()
     @Type(() => Number)
     port
