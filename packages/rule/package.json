@@ -1,6 +1,6 @@
 {
   "name": "@mazongguan/rule",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "The business rules of mazongguan",
   "main": "index.js",
   "scripts": {
