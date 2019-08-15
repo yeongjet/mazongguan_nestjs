@@ -6,7 +6,7 @@
     "description": "Mazongguan Enterprise API.",
     "scripts": {
         "build": "tsc",
-        "start": "node bin/start.ts",
+        "start": "ts-node bin/start.ts",
         "test": "jest"
     },
     "gitHead": "3676fe5480cf9d93ac219f1d2067207e559ca51d",

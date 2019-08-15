@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import { IsInt, IsString } from 'class-validator'
 import { Type } from 'class-transformer'
 import { DBSetting, DocSetting } from '../interface'
@@ -10,7 +11,7 @@ export class APISetting {
     @IsString()
     @Type(() => String)
     host
-    logLevel
+    logLevel: LogLevel
     database: DBSetting
     doc: DocSetting
 }
