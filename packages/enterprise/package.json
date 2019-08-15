@@ -11,6 +11,6 @@
     },
     "gitHead": "3c53e59a44d5856b1ccde28d81da9e255b07d9ce",
     "dependencies": {
-        "@mazongguan/common": "^0.0.19"
+        "@mazongguan/common": "0.0.19"
     }
 }

@@ -1,6 +1,7 @@
-import { Module } from '@nestjs/common'
+import { Global, Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
 
+@Global()
 @Module({
     imports: [
         TypeOrmModule.forRoot({
@@ -13,6 +14,8 @@ import { TypeOrmModule } from '@nestjs/typeorm'
             entities: [__dirname + '/**/*.entity{.ts,.js}'],
             synchronize: true
         })
-    ]
+    ],
+    providers: [DatabaseService],
+    exports: [DatabaseService]
 })
 export class ApplicationModule {}
