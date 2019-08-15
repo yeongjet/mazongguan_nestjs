@@ -1,6 +1,6 @@
 {
     "name": "@mazongguan/enterprise",
-    "version": "0.0.5",
+    "version": "0.0.6-alpha.0",
     "main": "lib/index.js",
     "description": "Mazongguan Enterprise API.",
     "scripts": {
@@ -10,6 +10,6 @@
     },
     "gitHead": "da2cd26f58120a5836744dff55c415d30da1d8b4",
     "devDependencies": {
-        "@mazongguan/common": "0.0.5"
+        "@mazongguan/common": "^0.0.6-alpha.0"
     }
 }
