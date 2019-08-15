@@ -8,7 +8,7 @@
         "start": "node bin/start.js",
         "test": "jest"
     },
-    "gitHead": "da2cd26f58120a5836744dff55c415d30da1d8b4",
+    "gitHead": "3676fe5480cf9d93ac219f1d2067207e559ca51d",
     "devDependencies": {
         "@mazongguan/common": "^0.0.6-alpha.0"
     }
