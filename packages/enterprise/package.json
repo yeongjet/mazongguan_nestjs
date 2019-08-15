@@ -2,7 +2,7 @@
     "name": "@mazongguan/enterprise",
     "version": "0.0.7",
     "main": "lib/index.js",
-    "typings": "./index.d.ts",
+    "typings": "lib/index.d.ts",
     "description": "Mazongguan Enterprise API.",
     "scripts": {
         "build": "tsc",
