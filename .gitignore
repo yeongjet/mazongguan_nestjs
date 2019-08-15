@@ -1,4 +1,3 @@
-dist
 node_modules
-dev/db.env
-lib
+packages/**/*.d.ts
+packages/**/*.js
