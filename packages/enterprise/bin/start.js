@@ -1,5 +1,5 @@
 const { APIEnterprise } = require('../lib')
-const { APISetting } = require('@mazongguan/common')
+const { API } = require('@mazongguan/common')
 new APIEnterprise({
     host: 'localhost',
     port: 3000,
