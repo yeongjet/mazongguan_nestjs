@@ -5,6 +5,6 @@ export interface DatabaseSetting {
     password: string
     database: string
     port: number
-    synchronize: boolean,
+    synchronize: boolean
     logging: boolean
 }
