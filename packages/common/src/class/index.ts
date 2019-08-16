@@ -1,1 +1,1 @@
-export * from './APISetting.class'
+export * from './api-setting.class'

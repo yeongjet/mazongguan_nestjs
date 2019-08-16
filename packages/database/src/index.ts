@@ -1,2 +1,2 @@
 export * from './model'
-export * from './app.module'
+export * from './database/database.module'

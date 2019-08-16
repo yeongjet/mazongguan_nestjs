@@ -1,2 +1,2 @@
-export * from './DBSetting.interface'
-export * from './DocSetting.interface'
+export * from './database-setting.interface'
+export * from './document-setting.interface'

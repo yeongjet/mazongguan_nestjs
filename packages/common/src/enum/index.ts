@@ -1,1 +1,1 @@
-export * from './LogLevel.enum'
+export * from './log-level.enum'

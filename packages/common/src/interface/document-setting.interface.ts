@@ -1,4 +1,4 @@
-export interface DocSetting {
+export interface DocumentSetting {
     title: string
     description: string
     version: string

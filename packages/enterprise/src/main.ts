@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core'
 import { Logger } from '@nestjs/common'
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
-import { AppModule } from './app.module'
+import { EnterpriseModule } from './enterprise/enterprise.module'
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify'
 import { HttpExceptionFilter } from './common/filters/http.exception.filter'
 import { APISetting } from '@mazongguan/common'
@@ -16,7 +16,7 @@ export class APIEnterprise {
     }
 
     private async setupApp() {
-        this.app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter())
+        this.app = await NestFactory.create<NestFastifyApplication>(EnterpriseModule, new FastifyAdapter())
         this.app.useGlobalFilters(new HttpExceptionFilter())
     }
 

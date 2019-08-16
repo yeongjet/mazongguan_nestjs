@@ -1,5 +1,5 @@
 {
-  "name": "@mazongguan/db",
+  "name": "@mazongguan/database",
   "version": "0.0.19",
   "description": "",
   "main": "lib/index.js",
@@ -8,5 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "3c53e59a44d5856b1ccde28d81da9e255b07d9ce"
+  "gitHead": "3c53e59a44d5856b1ccde28d81da9e255b07d9ce",
+  "dependencies": {
+    "@mazongguan/common": "^0.0.19"
+  }
 }

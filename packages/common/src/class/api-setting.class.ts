@@ -1,7 +1,7 @@
 import 'reflect-metadata'
 import { IsInt, IsString } from 'class-validator'
 import { Type } from 'class-transformer'
-import { DBSetting, DocSetting } from '../interface'
+import { DatabaseSetting, DocumentSetting } from '../interface'
 import { LogLevel } from '../enum'
 
 export class APISetting {
@@ -15,6 +15,6 @@ export class APISetting {
     @Type(() => String)
     host
     logLevel: LogLevel
-    database: DBSetting
-    doc: DocSetting
+    database: DatabaseSetting
+    doc: DocumentSetting
 }
