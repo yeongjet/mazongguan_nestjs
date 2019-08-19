@@ -1,2 +1,2 @@
 export * from './model'
-export * from './database/database.module'
+export { CoreModule as DatabaseModule } from './core/core.module'
