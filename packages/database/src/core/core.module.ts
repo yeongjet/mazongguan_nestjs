@@ -13,7 +13,7 @@ export class CoreModule {
                 TypeOrmModule.forRoot({
                     ...settings,
                     entities: Object.values(models)
-                })
+                } as any)
             ],
             providers: [CoreService],
             exports: [CoreService]

@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common'
+import { Acc } from '@mazongguan/database'
 import { ConfigModule } from '../common/module/config/config.module'
 import { AccountController } from '../account/account.controller'
 import { AccountService } from '../account/account.service'
@@ -8,4 +9,4 @@ import { AccountService } from '../account/account.service'
     providers: [AccountService],
     imports: [ConfigModule]
 })
-export class EnterpriseModule {}
+export class CoreModule {}

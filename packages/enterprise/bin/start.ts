@@ -18,7 +18,7 @@ const option: APISetting = {
         title: 'Mazongguan Enterprise API',
         description: '码总管企业端文档',
         version: '1.0',
-        url: '/api/enterprise'
+        url: '/api/core'
     }
 }
 

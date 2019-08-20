@@ -1,10 +1,12 @@
+import { TypeOrmModuleOptions } from '@nestjs/typeorm'
+
 export interface DatabaseSetting {
     type: string
     host: string
+    port: number
     username: string
     password: string
     database: string
-    port: number
     synchronize: boolean
     logging: boolean
 }
