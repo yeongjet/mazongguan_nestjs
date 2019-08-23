@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common'
 import { Acc } from '@mazongguan/database'
-import { ConfigModule } from '../common/module/config/config.module'
+import { ConfigModule } from '../config/config.module'
 import { AccountController } from '../account/account.controller'
 import { AccountService } from '../account/account.service'
 

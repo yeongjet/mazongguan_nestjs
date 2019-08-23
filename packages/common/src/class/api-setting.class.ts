@@ -1,8 +1,9 @@
 import 'reflect-metadata'
 import { IsInt, IsString } from 'class-validator'
 import { Type } from 'class-transformer'
-import { DatabaseSetting, DocumentSetting } from '../interface'
+import { DocumentSetting } from '../interface'
 import { LogLevel } from '../enum'
+import { TypeOrmModuleOptions } from '@nestjs/typeorm'
 
 export class APISetting {
     @IsString()
@@ -15,6 +16,6 @@ export class APISetting {
     @Type(() => String)
     host
     logLevel: LogLevel
-    database: DatabaseSetting
-    doc: DocumentSetting
+    database: TypeOrmModuleOptions
+    document: DocumentSetting
 }

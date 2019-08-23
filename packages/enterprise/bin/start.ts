@@ -1,5 +1,5 @@
 import { APISetting, LogLevel } from '@mazongguan/common'
-import { APIEnterprise } from '../src'
+import { MazongguanAPI } from '../src'
 
 const option: APISetting = {
     protocol: 'http',
@@ -12,14 +12,15 @@ const option: APISetting = {
         password: 'qwe123',
         database: 'mzgdev',
         port: 5432,
-        logging: true
+        logging: true,
+        synchronize: true
     },
-    doc: {
+    document: {
         title: 'Mazongguan Enterprise API',
         description: '码总管企业端文档',
         version: '1.0',
-        url: '/api/core'
+        url: '/api/enterprise'
     }
 }
 
-new APIEnterprise(option).start()
+new MazongguanAPI(option).start()
