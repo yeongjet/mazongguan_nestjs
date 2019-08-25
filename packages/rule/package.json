@@ -1,16 +1,12 @@
 {
-  "name": "@mazongguan/rule",
-  "version": "0.0.19",
-  "description": "The business rules of mazongguan",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@mazongguan/common": "^0.0.19",
-    "json-rules-engine": "^3.1.0"
-  },
-  "gitHead": "3c53e59a44d5856b1ccde28d81da9e255b07d9ce"
+	"name": "@mazongguan/rule",
+	"version": "0.0.19",
+	"description": "The business rules of mazongguan",
+	"main": "index.js",
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"json-rules-engine": "^3.1.0"
+	},
+	"gitHead": "3c53e59a44d5856b1ccde28d81da9e255b07d9ce"
 }

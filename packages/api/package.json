@@ -1,12 +1,12 @@
 {
-    "name": "@mazongguan/enterprise",
+    "name": "@mazongguan/api",
     "version": "0.0.19",
     "main": "lib/index.js",
     "typings": "lib/index.d.ts",
     "description": "Mazongguan Enterprise API.",
     "scripts": {
         "build": "tsc",
-        "start": "ts-node bin/start.ts",
+        "start": "nodemon --exec ts-node bin/start.ts",
         "test": "jest"
     },
     "gitHead": "3c53e59a44d5856b1ccde28d81da9e255b07d9ce",

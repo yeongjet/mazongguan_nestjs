@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core'
 import { Logger } from '@nestjs/common'
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
-import { CoreModule } from './core/core.module'
+import { APIModule } from './api.module'
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify'
 import { HttpExceptionFilter } from './common/filters/http.exception.filter'
 import { APISetting } from '@mazongguan/common'
@@ -16,7 +16,7 @@ export class MazongguanAPI {
     }
 
     private async setupApp() {
-        this.app = await NestFactory.create<NestFastifyApplication>(CoreModule, new FastifyAdapter())
+        this.app = await NestFactory.create<NestFastifyApplication>(APIModule, new FastifyAdapter())
         this.app.useGlobalFilters(new HttpExceptionFilter())
     }
 
@@ -31,7 +31,7 @@ export class MazongguanAPI {
     }
 
     async start() {
-        Logger.log('Start up mazongguan core API server...')
+        Logger.log('Start up mazongguan enterprise API server...')
         try {
             await this.setupApp()
             this.setupDocument()

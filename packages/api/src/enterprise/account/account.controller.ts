@@ -1,10 +1,9 @@
 import { Controller, Get, Post, Body, Param, UsePipes } from '@nestjs/common'
 import { ApiResponse, ApiOperation, ApiUseTags, ApiImplicitParam } from '@nestjs/swagger'
-import { ValidationPipe } from '../common/pipe/validation.pipe'
-
+import { ValidationPipe } from '../../common/pipe/validation.pipe'
 import { Account } from './interface/account.interface'
 import { AccountService } from './account.service'
-import { ParseIdPipe } from './pipe/parseId.pipe'
+import { ParseIdPipe } from '../../common/pipe/parseId.pipe'
 import { SignUpDto } from './dto'
 
 @ApiUseTags('账号')
@@ -26,8 +25,8 @@ export class AccountController {
     }
 
     @Get(':id')
-    @ApiImplicitParam({ name: 'id', description: '账号id', required: true })
     @ApiOperation({ title: '获取某个账号信息' })
+    @ApiImplicitParam({ name: 'id', description: '账号id', required: true })
     async findOne(@Param('id', new ParseIdPipe()) id): Promise<Account> {
         return await this.accountService.findOne(id)
     }

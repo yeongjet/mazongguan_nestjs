@@ -1,12 +1,85 @@
 0 silly argv {
-0 silly argv   _: [ 'publish' ],
-0 silly argv   registry: 'http://localhost:4873',
-0 silly argv   composed: 'publish',
+0 silly argv   _: [ 'bootstrap' ],
 0 silly argv   lernaVersion: '3.16.4',
 0 silly argv   '$0': 'node_modules\\lerna\\cli.js'
 0 silly argv }
 1 notice cli v3.16.4
 2 verbose rootPath D:\project\mazongguan_nestjs
-3 error JSONError: Unexpected token } in JSON at position 328 while parsing near '...on": "^0.0.3",    }}' in packages\enterprise\package.json
-3 error     at module.exports (D:\project\mazongguan_nestjs\node_modules\parse-json\index.js:26:19)
-3 error     at parse (D:\project\mazongguan_nestjs\node_modules\load-json-file\index.js:15:9)
+3 silly batched [
+3 silly batched   PackageGraphNode {
+3 silly batched     name: '@mazongguan/common',
+3 silly batched     externalDependencies: Map {},
+3 silly batched     localDependencies: Map {},
+3 silly batched     localDependents: Map {
+3 silly batched       '@mazongguan/database' => [PackageGraphNode],
+3 silly batched       '@mazongguan/enterprise' => [PackageGraphNode],
+3 silly batched       '@mazongguan/monitor' => [PackageGraphNode],
+3 silly batched       '@mazongguan/rule' => [PackageGraphNode]
+3 silly batched     }
+3 silly batched   }
+3 silly batched ]
+4 silly batched [
+4 silly batched   PackageGraphNode {
+4 silly batched     name: '@mazongguan/database',
+4 silly batched     externalDependencies: Map {},
+4 silly batched     localDependencies: Map {},
+4 silly batched     localDependents: Map { '@mazongguan/enterprise' => [PackageGraphNode] }
+4 silly batched   },
+4 silly batched   PackageGraphNode {
+4 silly batched     name: '@mazongguan/monitor',
+4 silly batched     externalDependencies: Map {},
+4 silly batched     localDependencies: Map {},
+4 silly batched     localDependents: Map {}
+4 silly batched   },
+4 silly batched   PackageGraphNode {
+4 silly batched     name: '@mazongguan/rule',
+4 silly batched     externalDependencies: Map { 'json-rules-engine' => [Object] },
+4 silly batched     localDependencies: Map {},
+4 silly batched     localDependents: Map {}
+4 silly batched   }
+4 silly batched ]
+5 silly batched [
+5 silly batched   PackageGraphNode {
+5 silly batched     name: '@mazongguan/enterprise',
+5 silly batched     externalDependencies: Map {},
+5 silly batched     localDependencies: Map {},
+5 silly batched     localDependents: Map {}
+5 silly batched   }
+5 silly batched ]
+6 silly npmConfig {
+6 silly npmConfig   registry: 'http://localhost:4873',
+6 silly npmConfig   npmClient: 'npm',
+6 silly npmConfig   npmClientArgs: [],
+6 silly npmConfig   mutex: undefined
+6 silly npmConfig }
+7 info Bootstrapping 5 packages
+8 verbose lifecycle preinstall
+9 silly lifecycle No script for "preinstall" in "@mazongguan/common", continuing
+10 silly lifecycle No script for "preinstall" in "@mazongguan/database", continuing
+11 silly lifecycle No script for "preinstall" in "@mazongguan/monitor", continuing
+12 silly lifecycle No script for "preinstall" in "@mazongguan/rule", continuing
+13 silly lifecycle No script for "preinstall" in "@mazongguan/enterprise", continuing
+14 silly hasDependencyInstalled @mazongguan/rule json-rules-engine
+15 silly root dependencies {}
+16 silly leaf dependencies {}
+17 info Installing external dependencies
+18 verbose actions 1 actions, concurrency 12
+19 silly npmInstallDependencies @mazongguan/rule [ 'json-rules-engine@^3.1.0' ]
+20 silly npmInstallDependencies backup D:\project\mazongguan_nestjs\packages\rule\package.json
+21 silly npmInstallDependencies writing tempJson {
+21 silly npmInstallDependencies   name: '@mazongguan/rule',
+21 silly npmInstallDependencies   version: '0.0.19',
+21 silly npmInstallDependencies   description: 'The business rules of mazongguan',
+21 silly npmInstallDependencies   main: 'index.js',
+21 silly npmInstallDependencies   author: '',
+21 silly npmInstallDependencies   license: 'ISC',
+21 silly npmInstallDependencies   dependencies: { 'json-rules-engine': '^3.1.0' },
+21 silly npmInstallDependencies   gitHead: '3c53e59a44d5856b1ccde28d81da9e255b07d9ce'
+21 silly npmInstallDependencies }
+22 silly getExecOpts D:\project\mazongguan_nestjs\packages\rule http://localhost:4873
+23 silly npmInstall [ 'npm', [ 'install' ] ]
+24 silly npmInstallDependencies cleanup D:\project\mazongguan_nestjs\packages\rule\package.json
+25 error Error: ENOENT: no such file or directory, rename 'D:\project\mazongguan_nestjs\packages\rule\package.json.lerna_backup' -> 'D:\project\mazongguan_nestjs\packages\rule\package.json'
+25 error     at Object.renameSync (fs.js:609:3)
+25 error     at cleanup (D:\project\mazongguan_nestjs\node_modules\@lerna\npm-install\npm-install.js:70:10)
+25 error     at done (D:\project\mazongguan_nestjs\node_modules\@lerna\npm-install\npm-install.js:78:7)

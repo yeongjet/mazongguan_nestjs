@@ -3,15 +3,16 @@ import { MazongguanAPI } from '../src'
 
 const option: APISetting = {
     protocol: 'http',
-    port: 3000,
     host: 'localhost',
+    port: 3000,
     logLevel: LogLevel.LOG,
     database: {
+        type: 'postgres',
         host: 'localhost',
+        port: 5432,
         username: 'yeongjet',
         password: 'qwe123',
         database: 'mzgdev',
-        port: 5432,
         logging: true,
         synchronize: true
     },
@@ -22,5 +23,10 @@ const option: APISetting = {
         url: '/api/enterprise'
     }
 }
-
-new MazongguanAPI(option).start()
+;(async () => {
+    try {
+        await new MazongguanAPI(option).start()
+    } catch (e) {
+        console.error(e)
+    }
+})()
