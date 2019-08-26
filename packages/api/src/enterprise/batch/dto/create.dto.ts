@@ -1,31 +1,24 @@
 import { Type } from 'class-transformer'
-import { IsString, IsNotEmpty, Length } from 'class-validator'
+import { IsString, IsEnum, IsNotEmpty, Length } from 'class-validator'
 import { ApiModelProperty } from '@nestjs/swagger'
-import { APICode } from '../../../common/enum/api-code.enum'
+import { APICode, LabelType } from '../../../common'
 
-export class SignUpDto {
+export class CreateDto {
     @Type(() => String)
-    @Length(3, 20, {
-        message: '用户名长度为3-20位',
-        context: { code: APICode.INVALID_USERNAME }
-    })
-    @IsString({
-        message: '用户名必须是字符串',
-        context: { code: APICode.INVALID_USERNAME }
+    @IsEnum(LabelType, {
+        message: '标类型必须是指定值',
+        context: { code: APICode.INVALID_LABEL_TYPE }
     })
     @IsNotEmpty({
-        message: '用户名不能为空',
-        context: { code: APICode.INVALID_USERNAME }
+        message: '标类型不能为空',
+        context: { code: APICode.INVALID_LABEL_TYPE }
     })
     @ApiModelProperty({
-        description: '用户名',
+        description: '标类型',
         required: true,
-        type: 'string',
-        minLength: 3,
-        maxLength: 20,
-        example: 'Micheal Jackson'
+        enum: LabelType
     })
-    readonly username: string
+    readonly label_type: LabelType
 
     @ApiModelProperty({
         description: '密码',

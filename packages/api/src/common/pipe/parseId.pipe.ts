@@ -1,5 +1,5 @@
 import { ArgumentMetadata, Injectable, PipeTransform } from '@nestjs/common'
-import { APICode } from '../enum/api.code.enum'
+import { APICode } from '../enum/api-code.enum'
 import { APIException } from '../exception/api.exception'
 import * as _ from 'lodash'
 
