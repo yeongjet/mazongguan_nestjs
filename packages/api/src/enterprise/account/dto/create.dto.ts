@@ -1,9 +1,9 @@
 import { Type } from 'class-transformer'
 import { IsString, IsNotEmpty, Length } from 'class-validator'
 import { ApiModelProperty } from '@nestjs/swagger'
-import { APICode } from '../../../common/enum/api-code.enum'
+import { APICode } from '../../../common'
 
-export class SignUpDto {
+export class CreateDto {
     @Type(() => String)
     @Length(3, 20, {
         message: '用户名长度为3-20位',

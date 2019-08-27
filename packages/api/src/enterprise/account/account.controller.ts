@@ -1,9 +1,8 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common'
 import { ApiOperation, ApiUseTags, ApiImplicitParam } from '@nestjs/swagger'
-import { ValidationPipe } from '../../common/pipe/validation.pipe'
+import { ValidationPipe, ParseIdPipe } from '../../common'
 import { AccountService } from './account.service'
-import { ParseIdPipe } from '../../common/pipe/parseId.pipe'
-import { SignUpDto } from './dto'
+import { CreateDto } from './dto'
 import { Account } from '@mazongguan/database'
 
 @ApiUseTags('账号')
@@ -13,7 +12,7 @@ export class AccountController {
 
     @Post()
     @ApiOperation({ title: '注册账号' })
-    async create(@Body(new ValidationPipe()) signUpDto: SignUpDto) {
+    async create(@Body(new ValidationPipe()) signUpDto: CreateDto) {
         return this.accountService.create(signUpDto)
     }
 

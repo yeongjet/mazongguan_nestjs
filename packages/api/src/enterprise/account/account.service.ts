@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common'
 import { Account } from '@mazongguan/database'
-import { SignUpDto } from './dto'
+import { CreateDto } from './dto'
 import * as _ from 'lodash'
 
 // {
@@ -42,7 +42,7 @@ export class AccountService {
         return result
     }
 
-    async create(dto: SignUpDto): Promise<number> {
+    async create(dto: CreateDto): Promise<number> {
         return 1
     }
 

@@ -18,7 +18,7 @@ export class CreateDto {
         required: true,
         enum: LabelType
     })
-    readonly label_type: LabelType
+    readonly label_type: number
 
     @ApiModelProperty({
         description: '密码',

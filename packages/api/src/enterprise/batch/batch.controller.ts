@@ -12,9 +12,8 @@ export class BatchController {
 
     @Post()
     @ApiOperation({ title: '创建批次' })
-    async create(@Body(new ValidationPipe()) signUpDto: CreateDto) {
-        console.log(signUpDto)
-        return this.batchService.create(signUpDto)
+    async create(@Body(new ValidationPipe()) createDto: CreateDto) {
+        return this.batchService.create(createDto)
     }
 
     @Get()

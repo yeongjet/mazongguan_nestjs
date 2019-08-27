@@ -1,8 +1,7 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common'
 import { ApiOperation, ApiUseTags, ApiImplicitParam } from '@nestjs/swagger'
-import { ValidationPipe } from '../../common/pipe/validation.pipe'
+import { ParseIdPipe, ValidationPipe } from '../../common'
 import { CodeService } from './code.service'
-import { ParseIdPipe } from '../../common/pipe/parseId.pipe'
 import { SignUpDto } from './dto'
 import { Code } from '@mazongguan/database'
 
