@@ -13,7 +13,6 @@ export class ValidationPipe implements PipeTransform<any> {
         const object = plainToClass(metatype, value)
         const errors = await validate(object)
         if (!_.isEmpty(errors)) {
-            Logger.log(errors)
             // 获取到第一个没有通过验证的错误对象
             const { constraints, contexts } = errors.shift()
             // constraints: {"isString":"用户名必须是字符串","length":"用户名长度为3-8位"}

@@ -7,7 +7,7 @@ export class ParseIdPipe implements PipeTransform {
     transform(value: any) {
         const id: number = parseInt(value)
         if (!_.isNumber(id) || id <= 0) {
-            throw new APIException('用户ID无效', APICode.INVALID_USERNAME)
+            throw new APIException('ID无效', APICode.INVALID_ID)
         }
         return id
     }
