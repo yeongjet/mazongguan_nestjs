@@ -11,7 +11,7 @@ export class BatchController {
     constructor(private readonly batchService: BatchService) {}
 
     @Post()
-    @ApiOperation({ title: '创建批次' })
+    @ApiOperation({ title: '创建批次(生码)' })
     async create(@Body(new ValidationPipe()) createDto: CreateDto) {
         return this.batchService.create(createDto)
     }

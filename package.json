@@ -60,7 +60,7 @@
     "chalk": "^2.4.2",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.10.0",
-    "dotenv": "^8.0.0",
+    "fastify-compress": "^0.11.0",
     "fastify-swagger": "^2.4.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
@@ -68,6 +68,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2",
     "ts-node": "^8.3.0",
-    "typeorm": "^0.2.18"
+    "typeorm": "^0.2.18",
+    "yaml": "^1.6.0"
   }
 }

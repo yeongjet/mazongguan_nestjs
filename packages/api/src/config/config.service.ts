@@ -1,14 +1,9 @@
-import * as dotenv from 'dotenv'
-import * as fs from 'fs'
+import { APISetting } from '@mazongguan/common'
 
 export class ConfigService {
-    private readonly envConfig: { [key: string]: string }
+    readonly setting: APISetting
 
-    constructor(filePath?: string) {
-        // this.envConfig = dotenv.parse(fs.readFileSync(filePath))
-    }
-
-    get(key: string): string {
-        return this.envConfig[key]
+    constructor(setting?: APISetting) {
+        this.setting = setting
     }
 }

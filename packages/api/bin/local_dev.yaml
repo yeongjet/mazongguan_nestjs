@@ -1,0 +1,17 @@
+protocol: http
+host: localhost
+port: 3000
+database:
+    type: cockroachdb
+    host: localhost
+    port: 26257
+    username: mzgdev
+    password: mzg123
+    database: mazongguan_dev
+    logging: true
+    synchronize: false
+document:
+    title: Mazongguan Enterprise API
+    description: 码总管企业端文档
+    version: 1.0
+    url: /api/enterprise

@@ -1,22 +1,30 @@
+import 'reflect-metadata'
+import * as fs from 'fs'
+import * as YAML from 'yaml'
+// import * as compression from 'fastify-compress'
 import { NestFactory } from '@nestjs/core'
 import { Logger } from '@nestjs/common'
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
-import { APIModule } from './api.module'
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify'
-import { HttpExceptionFilter } from './common/filters/http.exception.filter'
+import { plainToClass } from 'class-transformer'
+import { APIModule } from './api.module'
+import { HttpExceptionFilter } from './common'
 import { APISetting } from '@mazongguan/common'
 import chalk from 'chalk'
 
 export class MazongguanAPI {
     private readonly url: string
+    private readonly setting: APISetting
     private app: NestFastifyApplication
 
-    constructor(private setting: APISetting) {
+    constructor(filePath: string) {
+        this.setting = plainToClass(APISetting, YAML.parse(fs.readFileSync(filePath, 'utf-8')))
         this.url = `${this.setting.protocol}://${this.setting.host}:${this.setting.port}`
     }
 
     private async setupApp() {
-        this.app = await NestFactory.create<NestFastifyApplication>(APIModule, new FastifyAdapter())
+        this.app = await NestFactory.create<NestFastifyApplication>(APIModule.forRoot(this.setting), new FastifyAdapter())
+        // this.app.use(compression())
         this.app.useGlobalFilters(new HttpExceptionFilter())
     }
 
