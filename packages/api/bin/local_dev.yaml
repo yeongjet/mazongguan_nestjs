@@ -9,7 +9,7 @@ database:
     password: mzg123
     database: mazongguan_dev
     logging: true
-    synchronize: false
+    synchronize: true
 document:
     title: Mazongguan Enterprise API
     description: 码总管企业端文档
